@@ -1,0 +1,44 @@
+\documentclass{article}
+\title{Equation-Writing in Latex}
+\author{Priyadharshini s}
+\usepackage{amsmath} % allows you to put text in the math environment.
+
+ \begin{document}
+ 
+ \maketitle
+
+\section{Linear Differential Equation}
+
+\[ \frac{d^2w}{dx^2} - \frac{4u^2w}{l^2}
+   = \frac{-qlx}{2D}+\frac{qx^2}{2D}  \]
+Here u, l, q, D are constants.\
+
+Auxiary Equation is \
+\[ D^2-\frac{4u^2}{l^2}w=0 \]
+\[ (D+\frac{2u}{l})(D-\frac{2u}{l})=0 \]
+\[ D=\frac{-2u}{l},\frac{2u}{l} \]
+
+So C.F is\
+ \[ C_1e^\frac{-2ux}{l} +C_2 e^\frac{2ux}{l} \]
+ or
+ \[ C_1cosh(\frac{2u}{l})x \]
+  Because \[cosh(x) = \frac{e^-x + e^x}{2} \]
+  
+  Now Particular Integral (P. I) is
+   \[ PI=\frac{1}{(D^2-\frac{4u^2}{l^2})} (\frac{-qlx}{2D}+\frac{qx^2}{2D}) \]
+   \[ = \frac{-q}{2D}\frac{1}{(D^2-\frac{4u^2}{l^2})}(lx-x^2)\]
+
+     \[ = \frac{-ql}{2D}\frac{1}{(D^2-(\frac{2u}{l})^2)}x  + \frac{q}{2D}\frac{1}{(D^2-(\frac{2u}{l})^2)}x^2 \]
+     
+     Taking 4u\^2/l\^2 common from denominator \
+     \[ = \frac{-ql}{2D}\frac{l^2}{-4u^2}(1+\frac{-l^2D^2}{4u^2})^-1 +\frac{q}{2D}\frac{l^2}{-4u^2}(1+\frac{-l^2D^2}{4u^2})^-1 \]
+     
+     Solving binomial as it is of the form \[(1-x)^-1=1+x^2+x^3+ ... \]
+   \[ = \frac{ql^3}{8Du^2} (1+ \frac{l^4D^4}{16u^4}+ ...)x + \frac{-ql^2}{8Du^2} (1+ \frac{l^4D^4}{16u^4}+ ...)x^2 \]
+   \[ = \frac{ql^3x}{8Du^2} - \frac{ql^2x^2}{8Du^2} \]
+   
+   Solution of Differential Equation is \
+   C. S = A. E + P. I
+   \[w = C_1cosh(\frac{2u}{l})x + \frac{ql^3x}{8Du^2} - \frac{ql^2x^2}{8Du^2} \]
+   
+     \end{document}
